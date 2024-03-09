@@ -1,0 +1,229 @@
+.App {
+  text-align: center;
+}
+
+.white-container {
+  background-color: rgba(0, 0, 0, 0.466);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+  gap: 10px;
+}
+
+.large-tab {
+  padding: 15px 100px; 
+  font-size: 1.2em; 
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.tab-selected {
+  background-color: #687e68;
+  color: rgb(255, 249, 249);
+}
+
+.tab-not-selected {
+  background-color: transparent;
+  color: #fcfcfc;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+  height: 50px; 
+}
+
+input[type="text"] {
+  flex: 1; 
+  font-size: 1.2em;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  max-width: 75%;
+  background-color: #5e5e5e;
+  color: rgb(255, 255, 255); 
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.2s; 
+  color: rgb(231, 222, 222); 
+}
+
+button:hover {
+  transform: scale(1.05); 
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  color: rgb(252, 252, 252); 
+  font-size: 1.1em;
+}
+
+.todo-text {
+  max-width: calc(100% - 120px); 
+  overflow-wrap: break-word; 
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+.completed-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgb(247, 241, 241); 
+  font-size: 1.1em;
+}
+
+.completed-item span {
+  margin-right: 10px;
+}
+
+button.add-todo {
+  background-color: #4d723f; 
+}
+
+button.edit {
+  background-color: #5f7c39; 
+  margin-left: 30px;
+}
+
+button.delete {
+  background-color: #234b33; 
+}
+
+button.completed {
+  background-color: #355c40; 
+}
+
+button.edit,
+button.delete,
+button.completed {
+  padding: 0.5em 1em; 
+  font-size: 0.9em; 
+}
+.todo-item:hover,
+.completed-item:hover {
+  background-color: rgb(173, 170, 170); 
+  border-radius: 8px; 
+}
+
+.todo-list-container,
+.completed-list-container {
+  max-height: 300px; 
+  overflow-y: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.todo-list-container::-webkit-scrollbar,
+.completed-list-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.todo-item,
+.completed-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 0; 
+  color: rgb(255, 253, 253); 
+  font-size: 1.1em;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(241, 241, 241, 0.4); 
+}
+
+.modal-content {
+  background-color: rgba(247, 245, 245, 0.884);
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #ffffff;
+  width: 35%; 
+  border-radius: 8px;
+  padding-bottom: 50px;
+}
+
+.close {
+  color: #f7f4f4;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(236, 231, 231);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.save-todo,
+.cancel-edit {
+  background-color: #0b6d34; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-todo {
+  margin-right: 10px;
+}
+
+.cancel-edit {
+  background-color: #fd0000; 
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color:  rgb(146, 146, 146); 
+}
